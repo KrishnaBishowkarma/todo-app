@@ -1,0 +1,18 @@
+# Ignore target directory (where compiled jar files are)
+target/
+
+# Ignore git files
+.git
+.gitignore
+
+# Ignore IDE files
+*.iml
+.idea/
+.vscode/
+
+# Ignore logs
+*.log
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
