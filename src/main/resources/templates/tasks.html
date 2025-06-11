@@ -17,7 +17,8 @@
 
 <div class="container">
     <h1 class="mt-5 text-center">Todo Application</h1>
-    <form action="/tasks" method="post" class="row mt-3">
+    <!-- Changed form action from /tasks to / -->
+    <form action="/" method="post" class="row mt-3">
         <div class="col-md-10">
             <input class="form-control form-control-lg" type="text" name="title" placeholder="Add a new task ..." required>
         </div>
@@ -34,9 +35,11 @@
                           th:classappend="${task.completed} ? 'text-strikethrough' : ''">
                     </span>
                     <div>
-                        <a th:href="@{/tasks/{id}/toggle(id=${task.id})}"
+                        <!-- Updated toggle link -->
+                        <a th:href="@{/{id}/toggle(id=${task.id})}"
                            class="btn btn-outline-secondary btn-sm">Toggle</a>
-                        <a th:href="@{/tasks/{id}/delete(id=${task.id})}"
+                        <!-- Updated delete link -->
+                        <a th:href="@{/{id}/delete(id=${task.id})}"
                            class="btn btn-outline-danger btn-sm ml-2">Delete</a>
                     </div>
                 </div>
